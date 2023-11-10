@@ -23,7 +23,6 @@ export const generateRecommended = () => {
     creator: {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),
-      subscribers: faker.number.int(),
       profilePic: faker.image.url(),
     },
   }));

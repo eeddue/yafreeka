@@ -1,7 +1,7 @@
+"use client";
 import RecommendedVideo from "@/app/ui/RecommendedVideo";
 import { generateRecommended } from "@/data/videos";
 import React from "react";
-import ReactPlayer from "react-player";
 
 function VideoPage() {
   const recommendedVideos = generateRecommended();

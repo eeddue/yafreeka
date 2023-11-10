@@ -8,8 +8,6 @@ export type VideoProps = {
 
 export type IUser = {
   name: string;
-  email: string;
-  subscribers: number;
   profilePic: string;
   _id: string;
 };
