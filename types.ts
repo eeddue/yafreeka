@@ -12,4 +12,9 @@ export type IUser = {
   _id: string;
 };
 
-export type IComment = {};
+export type CommentProps = {
+  _id: string;
+  likes: number;
+  comment: string;
+  creator: IUser;
+};

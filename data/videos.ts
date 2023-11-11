@@ -27,3 +27,16 @@ export const generateRecommended = () => {
     },
   }));
 };
+
+export const generateComments = () => {
+  return [...Array(15)].map(() => ({
+    _id: faker.string.uuid(),
+    likes: faker.number.int({ min: 1, max: 1000 }),
+    comment: faker.lorem.words({ min: 2, max: 30 }),
+    creator: {
+      _id: faker.string.uuid(),
+      name: faker.person.fullName(),
+      profilePic: faker.image.url(),
+    },
+  }));
+};

@@ -20,7 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Theme>
+        <Theme
+          appearance="light"
+          accentColor="jade"
+          radius="full"
+          scaling="105%"
+        >
           <Navbar />
           <div>{children}</div>
         </Theme>
