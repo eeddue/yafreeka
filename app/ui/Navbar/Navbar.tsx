@@ -11,6 +11,7 @@ import {
 import { CiSearch } from "react-icons/ci";
 import { TbSquareRoundedPlusFilled } from "react-icons/tb";
 import { HiOutlineStatusOnline, HiCog } from "react-icons/hi";
+import { HiMiniBookmark } from "react-icons/hi2";
 import { AiFillHome } from "react-icons/ai";
 import { RiFileVideoFill } from "react-icons/ri";
 import { PiBookOpenFill } from "react-icons/pi";
@@ -19,6 +20,7 @@ import { IoIosHelpCircle, IoIosNotifications } from "react-icons/io";
 import * as Popover from "@radix-ui/react-popover";
 import * as Avatar from "@radix-ui/react-avatar";
 import { usePathname } from "next/navigation";
+import { Text } from "@radix-ui/themes";
 
 const menuItens = [
   {
@@ -40,6 +42,11 @@ const menuItens = [
     title: "Scripts",
     href: "/scripts",
     icon: <PiBookOpenFill className="text-xl text-gray-600" />,
+  },
+  {
+    title: "Saved",
+    href: "/saved",
+    icon: <HiMiniBookmark className="text-xl text-gray-600" />,
   },
   {
     title: "Notifications",
@@ -79,8 +86,8 @@ function Navbar() {
             className="text-2xl cursor-pointer"
             onClick={toggleSidebar}
           />
-          <Link href="/">
-            <p className="font-bold text-xl">LOGO</p>
+          <Link href="/" className="font-bold text-xl">
+            <Text color="jade">YAFREEKA</Text>
           </Link>
         </div>
         <form
@@ -105,22 +112,22 @@ function Navbar() {
               <Popover.Content className="rounded-md w-[200px] mr-[10px] bg-white p-[10px] border-[1px] border-gray-300">
                 <div className="flex items-center gap-[10px]">
                   <TbSquareRoundedPlusFilled className="text-2xl" />
-                  <p className="">New video</p>
+                  <Link href="/create/video">New video</Link>
                 </div>
 
                 <div className="flex items-center gap-[10px] my-[10px]">
                   <BsPlusCircleDotted className="text-2xl" />
-                  <p className="">New quick</p>
+                  <Link href="/create/quick">New quick</Link>
                 </div>
 
                 <div className="flex items-center gap-[10px] my-[10px]">
                   <BsClipboardPlus className="text-xl" />
-                  <p className="">New script</p>
+                  <Link href="/create/script">New script</Link>
                 </div>
 
                 <div className="flex items-center gap-[10px]">
                   <HiOutlineStatusOnline className="text-2xl text-red-600" />
-                  <p className="">Go live</p>
+                  <Link href="/create/live">Go live</Link>
                 </div>
               </Popover.Content>
             </Popover.Portal>

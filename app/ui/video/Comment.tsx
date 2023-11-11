@@ -28,7 +28,7 @@ function Comment({ item }: { item: CommentProps }) {
           </Link>
           <p className="text-sm text-gray-600 mb-1">2 days ago</p>
         </Flex>
-        <p className="my-1 break-words">{item.comment}</p>
+        <p className="my-1">{item.comment}</p>
         <Button variant="ghost" style={{ alignSelf: "start" }}>
           <AiOutlineLike className="text-xl" /> 435
         </Button>
