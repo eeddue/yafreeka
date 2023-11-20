@@ -151,7 +151,7 @@ function Navbar() {
           return (
             <Link key={item.href} href={item.href} onClick={toggleSidebar}>
               <div
-                className={`flex items-center gap-[20px] m-[10px] rounded-md p-[10px] hover:bg-gray-100 ${
+                className={`flex items-center gap-[20px] mx-[10px] rounded-md p-[10px] hover:bg-gray-100 ${
                   isActive && "bg-gray-200"
                 } `}
               >

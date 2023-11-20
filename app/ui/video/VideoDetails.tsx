@@ -53,7 +53,7 @@ function VideoDetails() {
             </Popover.Trigger>
             <Popover.Content
               style={{ width: "350px" }}
-              className="bg-white border-gray-100 border-[1px] rounded-md p-[10px] mt-[10px] shadow-lg"
+              className="bg-white border-gray-200 border-[1px] rounded-md p-[10px] mt-[10px] shadow-lg"
             >
               <AddComment />
             </Popover.Content>
