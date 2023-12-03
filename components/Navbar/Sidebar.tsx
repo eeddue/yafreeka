@@ -65,8 +65,8 @@ function Sidebar() {
                   <SheetClose asChild>
                     <div
                       className={cn(
-                        "flex items-center gap-2.5 p-4 rounded-md duration-300 ease-in-out dark:hover:bg-gray-900 hover:bg-gray-200",
-                        active ? "dark:bg-gray-900 font-bold bg-gray-100" : ""
+                        "flex items-center gap-2.5 p-4 rounded-md duration-300 ease-in-out hover:bg-muted",
+                        active ? "font-semibold bg-muted" : ""
                       )}
                     >
                       {link.icon}
@@ -77,7 +77,7 @@ function Sidebar() {
               );
             })}
           </ul>
-          <div className="flex mt-1 items-center gap-2.5 text-red-500 p-4 rounded-md duration-500 ease-in-out dark:hover:bg-gray-900 hover:bg-gray-200">
+          <div className="flex mt-1 items-center gap-2.5 text-red-500 p-4 rounded-md duration-500 ease-in-out hover:bg-muted0">
             <LogOut size={20} />
             <span>Logout</span>
           </div>

@@ -37,11 +37,11 @@ function PopoverLinks() {
           <Plus size={25} />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="flex flex-col gap-2.5 w-[200px] px-5">
+      <PopoverContent className="flex flex-col w-[200px]">
         {popoverLinks.map((item) => {
           return (
             <Link href={item.href} key={item.href}>
-              <PopoverClose className="flex gap-2.5 items-center hover:opacity-70">
+              <PopoverClose className="flex gap-2.5 items-center hover:bg-muted w-full p-2 px-4 rounded-md">
                 {item.icon}
                 <span className="text-sm lg:text-md">{item.title}</span>
               </PopoverClose>

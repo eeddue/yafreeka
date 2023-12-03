@@ -9,6 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import Sidebar from "./Sidebar";
 import PopoverLinks from "./PopoverLinks";
+import SearchBarMobile from "./SearchBarMobile";
 
 const Navbar = () => {
   return (
@@ -29,9 +30,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-2.5">
-          <Button asChild variant="outline" className="w-[50px] md:hidden">
-            <Search size={64} />
-          </Button>
+          <SearchBarMobile />
           <Link href="/creator/ef342frv54235g" className="hidden md:inline">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />

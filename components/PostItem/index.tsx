@@ -29,11 +29,11 @@ function PostItem({ post }: { post: PostProps }) {
           </div>
         </Link>
       </div>
-      <div className="p-2.5 flex flex-col">
+      <div className="px-2.5 pt-2 flex flex-col">
         <Link href={`/creator/${post.creator._id}`} className="text-sm opacity-60 font-semibold">
           {post.creator.name}
         </Link>
-        <Link href={`/videos/${post._id}`} className="text-lg font-semibold line-clamp-2">
+        <Link href={`/videos/${post._id}`} className="md:text-lg font-semibold line-clamp-2">
           {post.title}
         </Link>
         <p className="opacity-50">{formatViews(post.views)} views • 2 day ago</p>
