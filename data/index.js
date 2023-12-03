@@ -5,7 +5,7 @@ export const generateVideos = () => {
     _id: faker.string.uuid(),
     views: faker.number.int({ min: 1, max: 1000000 }),
     thumbnail: faker.image.url(),
-    title: faker.lorem.words({ min: 2, max: 10 }),
+    title: faker.lorem.words({ min: 2, max: 15 }),
     creator: {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),

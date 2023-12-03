@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const links = [
   {
@@ -55,30 +56,32 @@ function Sidebar() {
           <Image src="https://app.yafreeka.com/splash/img/dark-2x.png" alt="logo" width={30} height={20} />
           <h1 className="font-bold text-xl">YAFREEKA</h1>
         </div>
-        <ul className="grid grid-cols-1 gap-1">
-          {links.map((link) => {
-            const active = link.href === pathname;
-            return (
-              <Link href={link.href} key={link.href}>
-                <SheetClose asChild>
-                  <div
-                    className={cn(
-                      "flex items-center gap-2.5 p-4 rounded-md duration-300 ease-in-out dark:hover:bg-gray-900 hover:bg-gray-200",
-                      active ? "dark:bg-gray-900 font-bold bg-gray-100" : ""
-                    )}
-                  >
-                    {link.icon}
-                    <span className="">{link.title}</span>
-                  </div>
-                </SheetClose>
-              </Link>
-            );
-          })}
-        </ul>
-        <div className="flex mt-1 items-center gap-2.5 text-red-500 p-4 rounded-md duration-500 ease-in-out dark:hover:bg-gray-900 hover:bg-gray-200">
-          <LogOut size={20} />
-          <span>Logout</span>
-        </div>
+        <ScrollArea className="h-[85%]">
+          <ul className="grid grid-cols-1 gap-1">
+            {links.map((link) => {
+              const active = link.href === pathname;
+              return (
+                <Link href={link.href} key={link.href}>
+                  <SheetClose asChild>
+                    <div
+                      className={cn(
+                        "flex items-center gap-2.5 p-4 rounded-md duration-300 ease-in-out dark:hover:bg-gray-900 hover:bg-gray-200",
+                        active ? "dark:bg-gray-900 font-bold bg-gray-100" : ""
+                      )}
+                    >
+                      {link.icon}
+                      <span className="">{link.title}</span>
+                    </div>
+                  </SheetClose>
+                </Link>
+              );
+            })}
+          </ul>
+          <div className="flex mt-1 items-center gap-2.5 text-red-500 p-4 rounded-md duration-500 ease-in-out dark:hover:bg-gray-900 hover:bg-gray-200">
+            <LogOut size={20} />
+            <span>Logout</span>
+          </div>
+        </ScrollArea>
       </SheetContent>
     </div>
   );
