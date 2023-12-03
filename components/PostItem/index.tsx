@@ -1,4 +1,4 @@
-import { formatViewsAndFollowers } from "@/lib/utils";
+import { formatViews } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,10 +9,13 @@ export type PostProps = {
   views: number;
   thumbnail: string;
   title: string;
+  likes: number;
+  saves: number;
   creator: {
     _id: string;
     name: string;
     profilePic: string;
+    followers: number;
   };
 };
 
@@ -36,7 +39,7 @@ function PostItem({ post }: { post: PostProps }) {
         <Link href={`/videos/${post._id}`} className="md:text-lg font-semibold line-clamp-2">
           {post.title}
         </Link>
-        <p className="opacity-50">{formatViewsAndFollowers(post.views)} views • 2 day ago</p>
+        <p className="opacity-50">{formatViews(post.views)} views • 2 day ago</p>
       </div>
     </div>
   );

@@ -6,6 +6,8 @@ export const generateVideos = () => {
     views: faker.number.int({ min: 1, max: 1000000 }),
     thumbnail: faker.image.url(),
     title: faker.lorem.words({ min: 2, max: 15 }),
+    likes: faker.number.int({ min: 0, max: 100000 }),
+    saves: faker.number.int({ min: 0, max: 10000 }),
     creator: {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),

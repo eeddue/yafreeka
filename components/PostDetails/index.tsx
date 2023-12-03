@@ -2,7 +2,7 @@ import React from "react";
 import { PostProps } from "../PostItem";
 import CustomAvatar from "../CustomAvatar";
 import Link from "next/link";
-import { formatFollowers } from "@/lib/utils";
+import { formatFollowers, formatViews } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { Bookmark, Share, ThumbsUp } from "lucide-react";
 
@@ -26,7 +26,7 @@ function PostDetails({ post }: { post: PostProps }) {
             </div>
           </Link>
           <Button variant="secondary" className="w-full max-w-[150px] ml-auto">
-            <p className="">Follow</p>
+            <p>Follow</p>
           </Button>
         </section>
 
@@ -34,11 +34,11 @@ function PostDetails({ post }: { post: PostProps }) {
         <section className="flex gap-2.5 lg:justify-end">
           <Button variant="outline" className="gap-2.5">
             <ThumbsUp size={20} />
-            <span className="">235</span>
+            <span>{formatViews(post.likes)}</span>
           </Button>
           <Button variant="outline" className="gap-2.5">
             <Bookmark size={20} />
-            <span className="">126</span>
+            <span>{formatViews(post.saves)}</span>
           </Button>
           <Button variant="outline" className="gap-2.5">
             <Share size={20} />
