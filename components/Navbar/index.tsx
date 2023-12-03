@@ -40,7 +40,7 @@ const Navbar = () => {
           <ToggleTheme />
           <PopoverLinks />
           <Sheet>
-            <SheetTrigger asChild>
+            <SheetTrigger asChild className="cursor-pointer">
               <AlignJustify size={30} />
             </SheetTrigger>
             <Sidebar />

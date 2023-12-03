@@ -2,7 +2,7 @@
 
 import React from "react";
 import { SheetClose, SheetContent } from "@/components/ui/sheet";
-import { BellRing, HelpCircle, LayoutPanelLeft, LogOut, Music, Play, Settings, User } from "lucide-react";
+import { BellRing, Bookmark, HelpCircle, LayoutPanelLeft, LogOut, Music, Play, Settings, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -24,6 +24,11 @@ const links = [
     title: "Podmusic",
     href: "/podmusic",
     icon: <Music size={20} />,
+  },
+  {
+    title: "Saved",
+    href: "/saved",
+    icon: <Bookmark size={20} />,
   },
   {
     title: "Notifications",
@@ -77,10 +82,10 @@ function Sidebar() {
               );
             })}
           </ul>
-          <div className="flex mt-1 items-center gap-2.5 text-red-500 p-4 rounded-md duration-500 ease-in-out hover:bg-muted0">
+          <SheetClose className="w-full flex mt-1 items-center gap-2.5 text-red-500 p-4 rounded-md duration-500 ease-in-out hover:bg-muted">
             <LogOut size={20} />
             <span>Logout</span>
-          </div>
+          </SheetClose>
         </ScrollArea>
       </SheetContent>
     </div>

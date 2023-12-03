@@ -24,9 +24,9 @@ export type PostProps = {
 function PostItem({ post }: { post: PostProps }) {
   return (
     <div key={post._id} className="w-full max-w-[550px] mx-auto md:mx-0">
-      <div className="w-full h-[250px] md:h-[200px] lg:h-[180px] relative bg-muted rounded-lg">
+      <div className="w-full h-[250px] md:h-[200px] lg:h-[180px] relative bg-muted md:rounded-lg">
         <Link href={`/videos/${post._id}`}>
-          <Image src={post.thumbnail} alt="thumbnail" layout="fill" objectFit="cover" className="rounded-lg" />
+          <Image src={post.thumbnail} alt="thumbnail" layout="fill" objectFit="cover" className="md:rounded-lg" />
         </Link>
         <div className="h-[55px] w-[55px] rounded-full overflow-hidden bg-muted z-100 absolute right-4 bottom-[-30px] border-[4px] dark:border-gray-900 border-white">
           <Link href={`/creator/${post.creator._id}`}>
@@ -38,7 +38,7 @@ function PostItem({ post }: { post: PostProps }) {
         <Link href={`/creator/${post.creator._id}`} className="text-sm opacity-60 font-semibold">
           {post.creator.name}
         </Link>
-        <Link href={`/videos/${post._id}`} className="md:text-lg font-semibold line-clamp-2">
+        <Link href={`/videos/${post._id}`} className="font-semibold line-clamp-2">
           {post.title}
         </Link>
         <p className="opacity-50 text-sm">
