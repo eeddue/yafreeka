@@ -34,11 +34,11 @@ function PostDetails({ post }: { post: PostProps }) {
         <section className="flex gap-2.5 lg:justify-end">
           <Button variant="outline" className="gap-2.5">
             <ThumbsUp size={20} />
-            <span>{formatViews(post.likes)}</span>
+            <span className="opacity-80">{formatViews(post.likes)}</span>
           </Button>
           <Button variant="outline" className="gap-2.5">
             <Bookmark size={20} />
-            <span>{formatViews(post.saves)}</span>
+            <span className="opacity-80">{formatViews(post.saves)}</span>
           </Button>
           <Button variant="outline" className="gap-2.5">
             <Share size={20} />

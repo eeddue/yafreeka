@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images : {
-        domains : ['app.yafreeka.com', 'picsum.photos', 'loremflickr.com']
+        remotePatterns : [{hostname:'app.yafreeka.com'}, {hostname:'picsum.photos'}, {hostname:'loremflickr.com'}]
     }
 }
 
