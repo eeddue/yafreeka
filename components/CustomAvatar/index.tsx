@@ -6,7 +6,7 @@ import React from "react";
 function CustomAvatar({ src, name }: { src: string; name: string }) {
   return (
     <Avatar>
-      <AvatarImage className="w-full h-full cover" src={src} />
+      <AvatarImage src={src} />
       <AvatarFallback className="flex items-center justify-center w-full h-full">{name.toUpperCase().slice(0, 2)}</AvatarFallback>
     </Avatar>
   );

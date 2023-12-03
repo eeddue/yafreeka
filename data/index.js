@@ -8,6 +8,7 @@ export const generateVideos = () => {
     title: faker.lorem.words({ min: 2, max: 15 }),
     likes: faker.number.int({ min: 0, max: 100000 }),
     saves: faker.number.int({ min: 0, max: 10000 }),
+    createdAt : faker.date.past({ years: 2 }),
     creator: {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),
@@ -25,6 +26,7 @@ export const generateRecommended = () => {
     title: faker.lorem.words({ min: 2, max: 10 }),
     likes: faker.number.int({ min: 0, max: 100000 }),
     saves: faker.number.int({ min: 0, max: 10000 }),
+    createdAt : faker.date.past({ years: 2 }),
     creator: {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),
@@ -38,7 +40,9 @@ export const generateComments = () => {
   return [...Array(15)].map(() => ({
     _id: faker.string.uuid(),
     likes: faker.number.int({ min: 1, max: 1000 }),
+    replies: faker.number.int({ min: 1, max: 700 }),
     comment: faker.lorem.words({ min: 2, max: 30 }),
+    createdAt : faker.date.past({ years: 1 }),
     creator: {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),

@@ -1,0 +1,34 @@
+"use client";
+
+import React from "react";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
+import { Label } from "../ui/label";
+import { PopoverClose } from "@radix-ui/react-popover";
+import { PostProps } from "../PostItem";
+import { Repeat } from "lucide-react";
+
+function AddComment({ post }: { post: PostProps }) {
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <Button variant="outline">
+          <Repeat size={20} />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="flex flex-col gap-2.5 w-[300px] shadow-lg">
+        <Label>Comment on this video</Label>
+        <Textarea placeholder="Type to comment..." />
+
+        <PopoverClose>
+          <Button variant="secondary" className="w-full">
+            Comment
+          </Button>
+        </PopoverClose>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+export default AddComment;

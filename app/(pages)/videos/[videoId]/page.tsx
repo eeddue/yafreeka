@@ -1,3 +1,4 @@
+import Comments from "@/components/Comments";
 import PostDetails from "@/components/PostDetails";
 import RecommendedVideo from "@/components/RecommendedVideo";
 import VideoComponent from "@/components/Video";
@@ -19,6 +20,9 @@ function WatchVideo() {
 
         {/* Post Details */}
         <PostDetails post={post} />
+
+        {/* Comments */}
+        <Comments />
       </section>
 
       {/* Recommended videos */}

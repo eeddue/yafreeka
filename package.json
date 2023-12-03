@@ -20,6 +20,7 @@
     "clsx": "^2.0.0",
     "comma-number": "^2.1.0",
     "lucide-react": "^0.294.0",
+    "moment": "^2.29.4",
     "next": "14.0.3",
     "next-themes": "^0.2.1",
     "react": "^18",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@types/comma-number": "^2.1.2",
+    "@types/moment": "^2.13.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
