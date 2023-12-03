@@ -1,4 +1,4 @@
-import { formatViews } from "@/lib/utils";
+import { formatViewsAndFollowers } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -24,8 +24,8 @@ function PostItem({ post }: { post: PostProps }) {
           <Image src={post.thumbnail} alt="thumbnail" layout="fill" objectFit="cover" />
         </Link>
         <Link href={`/creator/${post.creator._id}`}>
-          <div className="h-[55px] w-[55px] rounded-full overflow-hidden dark:bg-gray-900 bg-gray-200 z-100 absolute right-4 bottom-[-30px] border-[4px] dark:border-gray-900 border-white flex justify-center items-center">
-            <CustomAvatar />
+          <div className="h-[55px] w-[55px] rounded-full overflow-hidden dark:bg-gray-900 bg-gray-200 z-100 absolute right-4 bottom-[-30px] border-[4px] dark:border-gray-900 border-white">
+            <CustomAvatar src={post.creator.profilePic} name={post.creator.name} />
           </div>
         </Link>
       </div>
@@ -36,7 +36,7 @@ function PostItem({ post }: { post: PostProps }) {
         <Link href={`/videos/${post._id}`} className="md:text-lg font-semibold line-clamp-2">
           {post.title}
         </Link>
-        <p className="opacity-50">{formatViews(post.views)} views • 2 day ago</p>
+        <p className="opacity-50">{formatViewsAndFollowers(post.views)} views • 2 day ago</p>
       </div>
     </div>
   );

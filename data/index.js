@@ -10,6 +10,7 @@ export const generateVideos = () => {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),
       profilePic: faker.image.url(),
+      followers : faker.number.int({ min: 1, max: 1000000 }),
     },
   }));
 };
@@ -24,6 +25,7 @@ export const generateRecommended = () => {
       _id: faker.string.uuid(),
       name: faker.person.fullName(),
       profilePic: faker.image.url(),
+      followers : faker.number.int({ min: 1, max: 1000000 }),
     },
   }));
 };
