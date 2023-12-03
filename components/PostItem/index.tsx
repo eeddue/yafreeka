@@ -26,7 +26,7 @@ function PostItem({ post }: { post: PostProps }) {
     <div key={post._id} className="w-full max-w-[550px] mx-auto md:mx-0">
       <div className="w-full h-[250px] md:h-[200px] lg:h-[180px] relative bg-muted md:rounded-lg">
         <Link href={`/videos/${post._id}`}>
-          <Image src={post.thumbnail} alt="thumbnail" layout="fill" objectFit="cover" className="md:rounded-lg" />
+          <img src={post.thumbnail} alt="thumbnail" className="md:rounded-lg w-full h-full object-cover" />
         </Link>
         <div className="h-[55px] w-[55px] rounded-full overflow-hidden bg-muted z-100 absolute right-4 bottom-[-30px] border-[4px] dark:border-gray-900 border-white">
           <Link href={`/creator/${post.creator._id}`}>

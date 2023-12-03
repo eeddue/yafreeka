@@ -9,7 +9,7 @@ function RecommendedVideo({ post }: { post: PostProps }) {
     <div className="flex gap-2.5">
       <Link href={`/videos/${post._id}`}>
         <div className="bg-muted-rounded-md relative w-[150px] h-[100px] overflow-hidden">
-          <Image src={post.thumbnail} alt="thumbnail" layout="fill" objectFit="cover" />
+          <img src={post.thumbnail} alt="thumbnail" className="md:rounded-lg w-full h-full object-cover" />
         </div>
       </Link>
       <div className="">
