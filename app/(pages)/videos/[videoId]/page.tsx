@@ -12,7 +12,7 @@ function WatchVideo() {
   return (
     <div className="page grid grid-cols-1 lg:grid-cols-3 gap-2.5 py-2.5 ">
       {/* Post details */}
-      <section className="col-span-3 lg:col-span-2 h-4">
+      <section className="col-span-3 lg:col-span-2">
         {/* Post Video */}
         <div className="w-full">
           <VideoComponent url="https://v3.cdnpk.net/videvo_files/video/free/2019-11/large_watermarked/190301_1_25_11_preview.mp4" />
