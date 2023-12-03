@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function PodMusic() {
-  return (
-    <div>PodMusic</div>
-  )
+  return <div className="page">PodMusic</div>;
 }
 
-export default PodMusic
+export default PodMusic;

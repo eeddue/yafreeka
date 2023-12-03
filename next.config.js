@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ["picsum.photos", "loremflickr.com"],
-  },
-};
+    images : {
+        domains : ['app.yafreeka.com', 'picsum.photos', 'loremflickr.com']
+    }
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

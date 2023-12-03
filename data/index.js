@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 
 export const generateVideos = () => {
-  return [...Array(40)].map(() => ({
+  return [...Array(20)].map(() => ({
     _id: faker.string.uuid(),
     views: faker.number.int({ min: 1, max: 1000000 }),
     thumbnail: faker.image.url(),

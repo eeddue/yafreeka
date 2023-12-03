@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Quicks() {
-  return (
-    <div>Quicks</div>
-  )
+  return <div className="page">Quicks</div>;
 }
 
-export default Quicks
+export default Quicks;
