@@ -23,7 +23,6 @@ type QuickProps = {
 function QuicksPlayer({ videos }: { videos: QuickProps[] }) {
   const [currentVideo, setCurrentVideo] = React.useState<QuickProps | null>(null);
   const [currentIndex, setCurrentIndex] = React.useState(0);
-  const videoRef = React.useRef(null);
 
   React.useEffect(() => {
     setCurrentVideo(videos[currentIndex]);
@@ -44,7 +43,7 @@ function QuicksPlayer({ videos }: { videos: QuickProps[] }) {
   return (
     <div className="w-full flex flex-col h-[calc(100vh-60px)] max-w-[500px] border-border border-[1px] mx-auto">
       <div className="flex-1 flex relative max-h-[calc(100vh-60px-80px)]">
-        <video ref={videoRef} src={currentVideo.video} controls loop autoPlay className="w-full h-full object-contain" />
+        <video src={currentVideo.video} playsInline controls loop autoPlay className="w-full h-full object-contain" />
 
         <div className="absolute bottom-4 right-2.5 flex flex-col gap-4 justify-center rounded-full shadow-2xl p-2.5 bg-[#00000099]">
           <button className="flex flex-col items-center gap-1 text-white">
