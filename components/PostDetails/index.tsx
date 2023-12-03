@@ -11,7 +11,7 @@ function PostDetails({ post }: { post: PostProps }) {
     <div className="p-2.5">
       <h1 className="lg:text-lg">{post.title}</h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 items-center py-2.5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 items-center py-3">
         {/* Creator details */}
         <section className="flex gap-2.5 items-center">
           <div className="w-[50px] h-[50px] rounded-full bg-muted overflow-hidden">
