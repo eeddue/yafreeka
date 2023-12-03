@@ -57,11 +57,11 @@ function Sidebar() {
   return (
     <div>
       <SheetContent>
-        <div className="flex gap-2.5 items-center my-4">
+        <div className="flex gap-2.5 items-center my-4 border-b-border border-b-[1px] pb-2.5">
           <Image src="https://app.yafreeka.com/splash/img/dark-2x.png" alt="logo" width={30} height={20} />
           <h1 className="font-bold text-xl">YAFREEKA</h1>
         </div>
-        <ScrollArea className="h-[85%]">
+        <ScrollArea className="h-[90%]">
           <ul className="grid grid-cols-1 gap-1">
             {links.map((link) => {
               const active = link.href === pathname;

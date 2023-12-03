@@ -13,7 +13,7 @@ import SearchBarMobile from "./SearchBarMobile";
 
 const Navbar = () => {
   return (
-    <nav className="p-2.5 border-b-border-200 border-b-[1px] top-0 sticky z-10 bg-background">
+    <nav className="p-2.5 border-b-border-200 border-b-[1px] top-0 sticky z-10 bg-background h-[60px]">
       <header className="page flex gap-2.5 items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-2.5">

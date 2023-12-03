@@ -17,7 +17,7 @@ function SearchBarMobile() {
         <DialogHeader>
           <DialogTitle className="md:text-md">What or who are you looking for?</DialogTitle>
         </DialogHeader>
-        <Label className="opacity-80">Searh for videos and creators</Label>
+        <Label className="opacity-80">Search for videos and creators</Label>
         <Input placeholder="Type to search..." autoFocus />
         <DialogTrigger>
           <DialogFooter>
