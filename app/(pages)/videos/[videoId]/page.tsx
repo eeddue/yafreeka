@@ -14,7 +14,7 @@ function WatchVideo() {
       <section className="col-span-3 lg:col-span-2 h-4">
         {/* Post Video */}
         <div className="w-full">
-          <VideoComponent url="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.1080p.vp9.webm" />
+          <VideoComponent url="https://v3.cdnpk.net/videvo_files/video/free/2019-11/large_watermarked/190301_1_25_11_preview.mp4" />
         </div>
 
         {/* Post Details */}
